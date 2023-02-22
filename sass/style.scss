@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+$cyan-title: hsl(179, 62%, 43%);
+$button: hsl(71, 73%, 54%);
+$text1: hsl(218, 22%, 67%);
+$text2: hsl(204, 43%, 93%);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Karla", sans-serif;
+}
+
+// content
+.content {
+  min-height: 100vh;
+  background-color: $text2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &-wrapper {
+    width: calc(375px * 0.9);
+    border-radius: 0.35rem;
+    overflow: hidden;
+  }
+}
+
+@media screen and (min-width: 90em) {
+  .content {
+    &-wrapper {
+      width: 40%;
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+// info
+.info {
+  background-color: #fff;
+  padding: 2.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  &__title {
+    font-size: 1.5rem;
+    color: $cyan-title;
+  }
+
+  &__subtitle {
+    font-size: 1.125rem;
+    color: $button;
+  }
+
+  &__desc {
+    color: $text1;
+    line-height: 1.75rem;
+  }
+}
+
+@media screen and (min-width: 90em) {
+  .info {
+    width: 100%;
+  }
+}
+
+// access
+.access {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background-color: $cyan-title;
+  color: #fff;
+
+  &__title {
+    font-size: 1.5rem;
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: rgba($color: #fff, $alpha: 0.5);
+    & span {
+      font-size: 2.25rem;
+      color: #fff;
+      font-weight: 700;
+    }
+  }
+
+  &__desc {
+    color: $text2;
+  }
+
+  &__button {
+    font-weight: 700;
+    font-size: 1.25rem;
+    padding: 0.75rem 0;
+    border: none;
+    border-radius: 0.25rem;
+    background-color: $button;
+    color: #fff;
+
+    box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.3);
+  }
+}
+
+@media screen and (min-width: 90em) {
+  .access {
+    width: 50%;
+  }
+}
+
+// about
+.about {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  color: #fff;
+  background-color: hsl(179, 62%, 46%);
+
+  &__title {
+    font-size: 1.5rem;
+  }
+
+  &__links {
+    margin: 0;
+    padding: 0;
+    white-space: pre-line;
+    color: rgba($color: #fff, $alpha: 0.5);
+  }
+}
+
+@media screen and (min-width: 90em) {
+  .about {
+    width: 50%;
+  }
+}
